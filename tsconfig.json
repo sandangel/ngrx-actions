@@ -1,9 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": "tsconfig",
-    "lib": [
-      "es6"
-    ],
+    "lib": ["es6"],
     "module": "commonjs",
     "moduleResolution": "node",
     "experimentalDecorators": true,
@@ -19,15 +17,9 @@
     "strict": true,
     "sourceMap": true,
     "target": "es5",
-    "types": [
-      "jasmine"
-    ],
+    "types": ["jasmine"],
     "outDir": "dist"
   },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "src/spec/**/*"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["src/spec/**/*"]
 }

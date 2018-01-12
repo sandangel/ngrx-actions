@@ -1,39 +1,48 @@
 # 2.0.7 - 1/10/17
-- Fix: Fix publish
+
+* Fix: Fix publish
 
 # 2.0.6 - 1/10/17
-- Fix: Type issue #13
+
+* Fix: Type issue #13
 
 # 2.0.5 - 1/9/17
-- Fix: Performance Improvements #10
+
+* Fix: Performance Improvements #10
 
 # 2.0.4 - 1/7/17
-- Feature: Memoize Select
+
+* Feature: Memoize Select
 
 # 2.0.3 - 1/7/17
-- Fix: Build tweaks
+
+* Fix: Build tweaks
 
 # 2.0.2 - 1/7/17
-- Chore: Add error handling for select connect
+
+* Chore: Add error handling for select connect
 
 # 2.0.1 - 1/7/17
-- Chore: Better builds
+
+* Chore: Better builds
 
 # 2.0.0 - 1/5/17
-- Feature: Implied select name from property name
-- BREAKING: Add module for proper DI of selects
+
+* Feature: Implied select name from property name
+* BREAKING: Add module for proper DI of selects
 
 Instead of:
+
 ```javascript
 import { ngrxSelect } from 'ngrx-actions';
 
 @NgModule({
-    imports: [NgrxActionsModule]
+  imports: [NgrxActionsModule]
 })
 export class AppModule {
-    constructor(store: Store<MyState>) {
-        ngrxSelect(store);
-    }
+  constructor(store: Store<MyState>) {
+    ngrxSelect(store);
+  }
 }
 ```
 
@@ -43,30 +52,36 @@ do this:
 import { NgrxActionsModule, NgrxSelect } from 'ngrx-actions';
 
 @NgModule({
-    imports: [NgrxActionsModule]
+  imports: [NgrxActionsModule]
 })
 export class AppModule {
-    constructor(ngrxSelect: NgrxSelect, store: Store<MyState>) {
-        ngrxSelect.connect(store);
-    }
+  constructor(ngrxSelect: NgrxSelect, store: Store<MyState>) {
+    ngrxSelect.connect(store);
+  }
 }
 ```
 
 # 1.2.0 - 1/3/17
-- Feature: Select decorator
+
+* Feature: Select decorator
 
 # 1.1.3 - 1/3/17
-- Fix: Effects mismatch
+
+* Fix: Effects mismatch
 
 # 1.1.2 - 1/3/17
-- Fix: Effects with normal objects
+
+* Fix: Effects with normal objects
 
 # 1.1.1 - 1/3/17
-- Fix: NPM publish issue
+
+* Fix: NPM publish issue
 
 # 1.1.0 - 1/3/17
-- Fix: Seralization
-- Feature: Support multiple actions
+
+* Fix: Seralization
+* Feature: Support multiple actions
 
 # 1.0.0 - 1/2/17
-- Initial Release
+
+* Initial Release
